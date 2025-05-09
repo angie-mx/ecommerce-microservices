@@ -1,5 +1,4 @@
 ---
-version: "3"
 services:
   # MySQL Config for order service
   mysql-order:
@@ -149,10 +148,12 @@ services:
   # Product Service Config
   product-service:
     ports:
-      - "9080:8080"        # host:container
+      - "9080:8080"
     container_name: product-service
     # image: ibatulanandjp/product-service:latest
-    build: ./product-service
+    build:
+      context: .
+      dockerfile: product-service/Dockerfile
     pull_policy: always
     environment:
       - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/product-service
