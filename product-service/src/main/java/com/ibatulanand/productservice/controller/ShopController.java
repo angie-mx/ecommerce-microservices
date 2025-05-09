@@ -16,8 +16,7 @@ public class ShopController {
 
     @GetMapping("/shop")
     public String showShop(Model model) {
-        model.addAttribute("products", productService.getAllProducts());
-        return "products";          // looks for templates/products.html
+        model.addAttribute("products",productService.getAllProducts()); return "products";
     }
 }
 
