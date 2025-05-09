@@ -1,4 +1,4 @@
-package com.ibatulanand.productservice;
+package com.ibatulanand.productservice.controller;
 
 import com.ibatulanand.productservice.service.ProductService;
 import org.springframework.stereotype.Controller;
