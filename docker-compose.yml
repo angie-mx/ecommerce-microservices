@@ -148,6 +148,8 @@ services:
 
   # Product Service Config
   product-service:
+    ports:
+      - "9080:8080"        # host:container
     container_name: product-service
     image: ibatulanandjp/product-service:latest
     pull_policy: always

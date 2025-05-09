@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Product catalogue</h1>
+
+<table>
+    <thead><tr><th>Name</th><th>Price</th></tr></thead>
+    <tbody>
+    <tr th:each="p : ${products}">
+        <td th:text="${p.name}">Product Name</td>
+        <td th:text="${#numbers.formatCurrency(p.price)}">0.00</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr/>
+
+<form th:action="@{/shop}" th:object="${newProduct}" method="post">
+    <input th:field="*{name}"   placeholder="Name"/>
+    <input th:field="*{price}"  placeholder="Price" type="number" step="0.01"/>
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>

@@ -1,6 +1,5 @@
 package com.ibatulanand.orderservice.dto;
 
-import com.ibatulanand.orderservice.model.OrderLineItems;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
