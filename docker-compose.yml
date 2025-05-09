@@ -151,7 +151,8 @@ services:
     ports:
       - "9080:8080"        # host:container
     container_name: product-service
-    image: ibatulanandjp/product-service:latest
+    # image: ibatulanandjp/product-service:latest
+    build: ./product-service
     pull_policy: always
     environment:
       - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/product-service
